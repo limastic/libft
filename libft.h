@@ -6,16 +6,14 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:14:40 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/08 15:02:18 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/08 17:23:51 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
 # include <string.h>
-# include <strings.h>
 
 int		ft_isalpha(int i);
 int		ft_isdigit(int i);
