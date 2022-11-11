@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:14:40 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/10 20:38:03 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/11 10:30:27 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <string.h>
+# include <stdlib.h>
+# include <errno.h>
 
 int		ft_isalpha(int i);
 int		ft_isdigit(int i);
