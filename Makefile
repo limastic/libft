@@ -6,12 +6,12 @@
 #    By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 17:02:57 by nfaust            #+#    #+#              #
-#    Updated: 2022/11/08 17:12:50 by nfaust           ###   ########.fr        #
+#    Updated: 2022/11/11 11:44:26 by nfaust           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CC = gcc
+CC = cc
 FLAGS = -Wall -Werror -Wextra
 HEADER = libft.h
 REMOVE = rm
@@ -38,7 +38,8 @@ SOURCES = ft_atoi.c \
 	ft_strlcat.c \
 	ft_strlen.c \
 	ft_strnstr.c \
-	ft_tolower.c
+	ft_tolower.c \
+	ft_substr.c
 
 OBJ = $(SOURCES:.c=.o)
 
