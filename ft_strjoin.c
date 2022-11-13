@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 10:24:03 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/13 23:21:16 by nfaust           ###   ########.fr       */
+/*   Created: 2022/11/13 23:34:22 by nfaust            #+#    #+#             */
+/*   Updated: 2022/11/13 23:34:46 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	void	*alloc;
-
-	if (size && count > SIZE_MAX / size)
-		return (NULL);
-	alloc = malloc(size * count);
-	if (alloc == NULL)
-	{
-		errno = ENOMEM;
-		return (NULL);
-	}
-	ft_memset(alloc, 0, size);
-	return (alloc);
+	
 }
