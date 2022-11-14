@@ -6,16 +6,16 @@
 #    By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 17:02:57 by nfaust            #+#    #+#              #
-#    Updated: 2022/11/14 20:47:03 by nfaust           ###   ########.fr        #
+#    Updated: 2022/11/14 23:52:32 by nfaust           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = cc
 FLAGS = -Wall -Werror -Wextra
-HEADER = libft.h
-REMOVE = rm
 ARCHIVE = ar rc
+HEADER = libft.h
+REMOVE = rm -f
 SOURCES = ft_atoi.c \
 	ft_calloc.c \
 	ft_isalpha.c \
@@ -47,17 +47,21 @@ SOURCES = ft_atoi.c \
 
 OBJ = $(SOURCES:.c=.o)
 
+all:	${NAME}
+
 ${NAME}:    ${OBJ}
 	
-	${CC} ${FLAGS} -c ${SOURCES}
 	${ARCHIVE} ${NAME} ${OBJ}
-
-all:       	${NAME}
 
 clean:
 	${REMOVE} ${OBJ}
 
-fclean:
-	${REMOVE} ${OBJ} ${NAME}
+fclean:	clean
+	${REMOVE} ${NAME}
 
-re:    fclean ${NAME}
+%.o : %.c ${HEADER}
+	${CC} ${FLAGS} -c $< -o $@ -I . 
+
+re:    fclean all
+
+.PHONY: re fclean all clean

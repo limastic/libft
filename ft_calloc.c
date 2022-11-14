@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 10:24:03 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/13 23:21:16 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/15 00:05:12 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,7 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	alloc = malloc(size * count);
 	if (alloc == NULL)
-	{
-		errno = ENOMEM;
 		return (NULL);
-	}
-	ft_memset(alloc, 0, size);
+	ft_bzero(alloc, size * count);
 	return (alloc);
 }
