@@ -6,7 +6,7 @@
 #    By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 17:02:57 by nfaust            #+#    #+#              #
-#    Updated: 2022/11/13 23:48:41 by nfaust           ###   ########.fr        #
+#    Updated: 2022/11/14 14:39:34 by nfaust           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,8 @@ SOURCES = ft_atoi.c \
 	ft_tolower.c \
 	ft_substr.c \
 	ft_strjoin.c \
-	ft_strtrim.c
+	ft_strtrim.c \
+	ft_split.c
 
 OBJ = $(SOURCES:.c=.o)
 
