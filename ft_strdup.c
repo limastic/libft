@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 10:50:06 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/11 11:12:03 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/15 00:11:13 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,7 @@ char	*ft_strdup(const char *s1)
 		return (s1cpy);
 	}
 	if (!s1cpy)
-	{
-		errno = ENOMEM;
 		return (NULL);
-	}
 	ft_memcpy(s1cpy, s1, ft_strlen(s1));
 	return (s1cpy);
 }

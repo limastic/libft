@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:14:40 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/14 20:47:13 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/15 00:11:27 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <string.h>
 # include <stdlib.h>
-# include <errno.h>
 
 int		ft_isalpha(int i);
 int		ft_isdigit(int i);
