@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 14:39:20 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/15 08:45:50 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/15 19:13:47 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,9 +90,9 @@ char	**ft_split(char const *s, char c)
 	return (strtab);
 }
 
-int main(int argc, char const *argv[])
-{
-	printf("%s", *ft_split("          ", ' '));
-	return 0;
-}
+//int main(int argc, char const *argv[])
+//{
+//	printf("%s", *ft_split("          ", ' '));
+//	return 0;
+//}
 
