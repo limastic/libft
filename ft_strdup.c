@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 10:50:06 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/15 00:11:13 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/15 02:13:08 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 	char	*s1cpy;
 
 	s1len = ft_strlen(s1);
-	s1cpy = malloc(s1len * sizeof(char) + 1);
+	s1cpy = malloc((s1len + 1) * sizeof(char));
 	if (!s1len)
 	{
 		s1cpy[0] = 0;
@@ -26,6 +26,6 @@ char	*ft_strdup(const char *s1)
 	}
 	if (!s1cpy)
 		return (NULL);
-	ft_memcpy(s1cpy, s1, ft_strlen(s1));
+	ft_memcpy(s1cpy, s1, ft_strlen(s1) + 1);
 	return (s1cpy);
 }
