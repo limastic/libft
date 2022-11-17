@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 14:39:20 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/16 06:49:17 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/17 23:26:21 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,13 @@ char	**ft_split(char const *s, char c)
 	int		tabind;
 	int		j;
 
+	if (!s)
+		return (NULL);
 	strtab = malloc((_count_words(s, c) + 1) * sizeof(char *));
+	if (!strtab)
+	{
+		return (NULL);
+	}
 	i = _allocate_str(strtab, s, c);
 	if (!strtab || i != -1)
 		return (_free_tab(strtab, i - 1));
