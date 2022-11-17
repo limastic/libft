@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:58:11 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/07 17:38:19 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/17 17:57:12 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_isdigit(int i)
 {
-	unsigned char	c;
-
-	c = (unsigned char) i;
-	if (47 < c && c < 58)
+	if (47 < i && i < 58)
 		return (1);
 	return (0);
 }

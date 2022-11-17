@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:32:34 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/07 17:37:37 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/17 17:57:01 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_isascii(int i)
 {
-	unsigned char	c;
-
-	c = (unsigned char) i;
-	if (0 <= c && c <= 127)
+	if (0 <= i && i <= 127)
 		return (1);
 	return (0);
 }

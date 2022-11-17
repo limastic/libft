@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:03:26 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/07 18:08:31 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/17 17:57:23 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_isprint(int i)
 {
-	unsigned char	c;
-
-	c = (unsigned char)i;
-	if (31 < c && c < 127)
+	if (31 < i && i < 127)
 		return (1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:38:21 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/07 17:38:08 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/17 17:55:30 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_isalpha(int i)
 {
-	unsigned char	c;
-
-	c = (unsigned char) i;
-	if ((64 < c && c < 91) || (96 < c && c < 123))
+	if ((64 < i && i < 91) || (96 < i && i < 123))
 		return (1);
 	return (0);
 }

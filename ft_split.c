@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 14:39:20 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/15 19:34:05 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/16 06:49:17 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,14 @@ static int	_count_words(char const *s, char c)
 	return (count);
 }
 
+static void	*_free_tab(char **strtab, int ind)
+{
+	while (ind >= 0)
+		free(strtab[ind--]);
+	free(strtab);
+	return (NULL);
+}
+
 static int	_allocate_str(char **strtab, char const *s, char c)
 {
 	int	i;
@@ -55,11 +63,11 @@ static int	_allocate_str(char **strtab, char const *s, char c)
 		{
 			strtab[tabind] = malloc((j + 1) * sizeof(char));
 			if (!strtab[tabind])
-				return (0);
+				return (tabind);
 			tabind++;
 		}
 	}
-	return (1);
+	return (-1);
 }
 
 char	**ft_split(char const *s, char c)
@@ -70,8 +78,9 @@ char	**ft_split(char const *s, char c)
 	int		j;
 
 	strtab = malloc((_count_words(s, c) + 1) * sizeof(char *));
-	if (!strtab || !_allocate_str(strtab, s, c))
-		return (NULL);
+	i = _allocate_str(strtab, s, c);
+	if (!strtab || i != -1)
+		return (_free_tab(strtab, i - 1));
 	i = -1;
 	tabind = -1;
 	while (s[++i])
@@ -92,6 +101,9 @@ char	**ft_split(char const *s, char c)
 
 //int main(int argc, char const *argv[])
 //{
-//	printf("%s", *ft_split("          ", ' '));
+//	char **strtab = ft_split("          ", ' ');
+//	int i = 0;
+//	while (strtab[i] != NULL)
+//		printf("%s\n", strtab[i++]);
 //	return 0;
 //}
