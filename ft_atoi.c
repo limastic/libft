@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 09:39:45 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/14 20:48:29 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/18 02:04:31 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	nbr_is_negative;
-	int	result;
+	size_t	i;
+	int		nbr_is_negative;
+	int		result;
 
 	nbr_is_negative = 0;
 	result = 0;
