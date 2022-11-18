@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 14:39:20 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/17 23:26:21 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/17 23:58:15 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ static int	_count_words(char const *s, char c)
 	count = 0;
 	char_found = 0;
 	i = -1;
+	if (!s)
+		return (0);
 	while (s[++i])
 	{
 		char_found = 0;
@@ -51,6 +53,8 @@ static int	_allocate_str(char **strtab, char const *s, char c)
 
 	i = -1;
 	tabind = 0;
+	if (!strtab || !s)
+		return (0);
 	while (s[++i])
 	{
 		j = 0;
@@ -77,13 +81,7 @@ char	**ft_split(char const *s, char c)
 	int		tabind;
 	int		j;
 
-	if (!s)
-		return (NULL);
 	strtab = malloc((_count_words(s, c) + 1) * sizeof(char *));
-	if (!strtab)
-	{
-		return (NULL);
-	}
 	i = _allocate_str(strtab, s, c);
 	if (!strtab || i != -1)
 		return (_free_tab(strtab, i - 1));
@@ -104,12 +102,3 @@ char	**ft_split(char const *s, char c)
 	strtab[++tabind] = 0;
 	return (strtab);
 }
-
-//int main(int argc, char const *argv[])
-//{
-//	char **strtab = ft_split("          ", ' ');
-//	int i = 0;
-//	while (strtab[i] != NULL)
-//		printf("%s\n", strtab[i++]);
-//	return 0;
-//}
