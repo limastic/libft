@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 11:14:43 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/14 00:16:23 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/18 04:18:56 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*subs;
 	int		i;
 
+	if (!s)
+		return (NULL);
 	if (!len || start >= ft_strlen(s))
 		return (ft_calloc(1, sizeof(char)));
 	if (ft_strlen(s) >= len)
