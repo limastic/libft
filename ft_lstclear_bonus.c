@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 03:28:38 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/18 03:53:11 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/18 04:45:05 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 
 	if (lst && del && *lst)
 	{
-		while (lst && *lst)
+		while (*lst)
 		{
 			temp = (*lst)->next;
 			ft_lstdelone(*lst, del);

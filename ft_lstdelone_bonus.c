@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 03:11:38 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/18 03:26:58 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/18 04:47:15 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (lst && del)
 	{
-		del(lst);
-		free(lst->content);
+		del(lst->content);
+		free(lst);
 	}
 }
