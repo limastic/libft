@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 20:46:50 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/14 23:27:03 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/22 19:16:42 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,11 +66,11 @@ char	*ft_itoa(int n)
 
 	i = 0;
 	str = _allocate_str(n);
+	if (!str)
+		return (NULL);
 	if (!n)
 		str[i++] = 0 + '0';
 	n_cpy = (long) n;
-	if (!str)
-		return (NULL);
 	if (n < 0)
 	{
 		str[i++] = '-';

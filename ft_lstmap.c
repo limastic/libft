@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 03:48:10 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/18 04:13:59 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/22 19:50:09 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 				free(first_elt);
 				first_elt = new;
 			}
-			lst = NULL;
 			return (NULL);
 		}
 		ft_lstadd_back(&first_elt, new);

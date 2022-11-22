@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 14:39:20 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/22 18:40:13 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/22 19:45:42 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ static int	_count_words(char const *s, char c)
 	size_t	i;
 	int		count;
 	int		char_found;
+	size_t	s_len;
 
+	s_len = ft_strlen(s);
 	count = 0;
 	i = 0;
 	if (!s)
@@ -25,12 +27,12 @@ static int	_count_words(char const *s, char c)
 	while (s[i])
 	{
 		char_found = 0;
-		while (s[i] == c && i < ft_strlen(s) - 1)
+		while (s[i] == c && i < s_len - 1)
 		{
 			i++;
 			char_found = 1;
 		}
-		if ((char_found || i == 0) && s[i])
+		if ((char_found || i == 0) && s[i] && s[i] != c)
 			count++;
 		i++;
 	}

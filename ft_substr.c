@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 11:14:43 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/18 04:18:56 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/22 19:12:48 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (!len || start >= ft_strlen(s))
 		return (ft_calloc(1, sizeof(char)));
-	if (ft_strlen(s) >= len)
-		subs = malloc(len * (size_t) sizeof(char) + 1);
-	else
-		subs = malloc(ft_strlen(s) * (size_t) sizeof(char) + 1);
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
+	subs = malloc((len + 1) * (size_t) sizeof(char));
 	if (!subs)
 		return (NULL);
 	start -= 1;
