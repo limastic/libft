@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 23:16:05 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/18 04:22:52 by nfaust           ###   ########.fr       */
+/*   Updated: 2022/11/23 00:07:15 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
-	int		i;
+	ssize_t	i;
 
 	if (!f || !s)
 		return (NULL);
