@@ -6,7 +6,7 @@
 #    By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 17:02:57 by nfaust            #+#    #+#              #
-#    Updated: 2022/11/21 19:29:03 by nfaust           ###   ########.fr        #
+#    Updated: 2022/11/24 02:20:15 by nfaust           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,7 +77,7 @@ clean:
 fclean:	clean
 	${REMOVE} ${NAME}
 
-%.o : %.c ${HEADER}
+%.o : %.c ${HEADER} Makefile
 	${CC} ${FLAGS} -c $< -o $@ -I . 
 
 re:    fclean all
