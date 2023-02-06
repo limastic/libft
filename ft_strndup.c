@@ -22,8 +22,10 @@ char	*ft_strndup(char *src, size_t end_index)
 		return (NULL);
 	src_len = ft_strlen(src);
 	if (end_index > src_len)
-		end_index = src_len - 1;
+		end_index = src_len;
 	dst = malloc(sizeof(char) * (end_index + 1));
+	if (!dst)
+		return (NULL);
 	i = 0;
 	while (src[i] && i < end_index)
 	{
