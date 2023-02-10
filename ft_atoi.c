@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 09:39:45 by nfaust            #+#    #+#             */
-/*   Updated: 2022/11/23 06:24:02 by nfaust           ###   ########.fr       */
+/*   Updated: 2023/02/10 02:41:01 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int	ft_atoi(const char *str)
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 		if (str[i++] == '-')
-				nbr_is_negative = 1;
+			nbr_is_negative = 1;
 	result = _check_overflow(str + i, nbr_is_negative);
 	if (result < 1)
 		return (result);
