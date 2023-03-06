@@ -6,7 +6,7 @@
 /*   By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:14:40 by nfaust            #+#    #+#             */
-/*   Updated: 2023/01/18 17:56:16 by nfaust           ###   ########.fr       */
+/*   Updated: 2023/03/06 09:09:31 by nfaust           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ char		*ft_strtrim(char const *s1, char const *set);
 char		*ft_itoa(int n);
 char		*ft_strndup(char *src, size_t end_index);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char		*ft_dup_and_free(char **two_dim_array, size_t index);
 char		**ft_split(char const *s, char c);
 void		ft_bzero(void *s, size_t n);
 void		ft_dblstdelone(t_dblist *lst, void (*del)(void*));
@@ -74,6 +75,7 @@ void		ft_lstclear(t_list **lst, void (*del)(void*));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 void		ft_putnbr_fd(int n, int fd);
 void		ft_free_twodimarr(char **twodimarr);
+void		ft_printfree(char *str);
 void		*ft_memset(void *b, int c, size_t len);
 void		*ft_memcpy(void *dst, const void *src, size_t n);
 void		*ft_memmove(void *dst, const void *src, size_t len);

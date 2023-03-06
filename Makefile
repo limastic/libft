@@ -6,7 +6,7 @@
 #    By: nfaust <nfaust@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 17:02:57 by nfaust            #+#    #+#              #
-#    Updated: 2023/01/18 17:55:34 by nfaust           ###   ########.fr        #
+#    Updated: 2023/03/06 09:09:50 by nfaust           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ SOURCES = ft_atoi.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
-	 ft_lstnew.c \
+	ft_lstnew.c \
 	ft_lstadd_front.c \
 	ft_lstsize.c \
 	ft_lstlast.c \
@@ -70,7 +70,9 @@ SOURCES = ft_atoi.c \
 	ft_dblstmap.c \
 	ft_free_twodimarr.c \
 	ft_isempty.c \
-	ft_strndup.c
+	ft_strndup.c \
+	ft_dup_and_free.c \
+	ft_printfree.c
 
 OBJ = $(SOURCES:.c=.o)
 
