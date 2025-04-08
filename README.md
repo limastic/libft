@@ -89,9 +89,6 @@ Tools for creating and manipulating linked lists:
 # Build the library
 make
 
-# Add bonus functions
-make bonus
-
 # Clean up object files
 make clean
 
@@ -107,11 +104,6 @@ Include in your projects:
 #include "libft.h"
 ```
 
-Compile with:
-```bash
-cc -L. -lft your_file.c
-```
-
 ---
 
 ## 💡 Key Learnings
@@ -124,14 +116,5 @@ cc -L. -lft your_file.c
 
 ---
 
-## 📦 Project Structure
-
-```
-.
-├── Makefile        # Compilation rules
-├── libft.h         # Library header
-├── ft_*.c          # Source files
-└── README.md       # You are here!
-```
 
 All functions follow the 42 Norm and are memory-leak free! 🧹
